@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+*,*::before,*::after{
+    box-sizing: border-box;
+    padding: 0%;
+    margin: 0%
+}
+body{
+    background-color:#626264 ;
+    font-family: 'Oxygen' , sans-serif;
+    max-height: 100vh;
+}
+
+/* styling of header , nav-bar and social media icons*/
+#header{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    padding: 1.5rem 6rem;
+    color: white;
+}
+/* my brand styling*/
+.brand{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.brand .brand-logo{
+    object-fit: contain;
+    z-index: 2;
+}
+.brand .brand-name a{
+    font-size: 2rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: inherit;
+    text-shadow: 2px 2px 10px rgba(185, 173, 173, 0.8);
+    font-family: 'Bree Serif', serif;
+    text-transform: uppercase;
+}
+/* navigation items styling*/
+#nav-bar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+#nav-bar ul li{
+    list-style: none;
+    padding-left: 1.2rem;
+}
+
+#nav-bar li a{
+    text-decoration: none;
+    color: inherit;
+    font-size: 1.05rem;
+    font-weight: 300;
+    text-align: center;
+    margin: 0px 15px;
+}
+
+#nav-bar li a:hover {
+    border-bottom: 2px solid #B2B2B2;
+    padding-bottom: 4px;
+    font-size: 1.2rem;
+}
+/*social media links styling*/
+
+.social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.social-links a {
+    padding: 15px;
+}
+
+
+
+/* styling of main content involving an image slider and some content*/
+#main-section{
+   display: flex;
+   flex-direction: column;
+   color: white;
+}
+.title-section{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 2em calc((100vw - 540px)/2) 0em;
+}
+.title{
+    font-size: 2.3rem;
+    margin-bottom: 2rem;
+}
+.sub-title{
+    font-size: 1.3rem;
+    font-weight: lighter;
+    margin-bottom: 2rem;
+}
+.signin-btn {
+    width: 6.5rem;
+    height: 1.7rem;
+    background-color: #ED3F3F;
+    border: 2px solid #ED3F3F;
+    border-radius: 9px;
+    outline:none;
+    cursor: pointer;
+}
+.signin-btn a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.96rem;
+    font-weight: 400;
+}
+.slider{
+    margin: 2rem auto;
+    width: 550px;
+    height: 350px;
+    border-radius: 35px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+}
+.slider .product{ 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.slider .product-image , #last-clone , #first-clone{
+    margin: 0 auto;
+    box-sizing: border-box;
+    backdrop-filter: blur(50px);
+    width:550px;
+    height:350px;
+}
+/* styling for all icons*/
+i.fa {
+    font-size: 20px;
+    color: #fff;
+    border: 2px solid #626264;
+    padding: 4px;
+    border-radius: 25%;
+    cursor: pointer;
+    background-color: transparent;
+}
+#nextBtn{
+    position: absolute;
+    left:65%;
+    bottom:30%;
+}
+#previousBtn{
+    position: absolute;
+    left: 33%;
+    bottom:30%;
+}
+@media screen and (max-width:900px){
+    #header{
+        flex-direction: column;
+    }
+    .brand{
+        margin-bottom:1.5rem;
+    }
+    .slider{
+        max-width: 420px;
+        max-height: 254px;
+    }
+    .product-image, #lastclone , #firstclone{
+        width: 420px;
+        height: 254px;
+    }
+    .title-section{
+        align-items: center;
+    }
+}
+@media screen and (max-width:552px){
+    #header{
+        padding: 2rem 2.5rem 1.2rem;
+    }
+    #nav-bar ul {
+       display: none;
+    }
+    .title{
+        font-size: 2.5rem;
+    }
+    .sub-title{
+        font-size: 1.4rem;
+    }
+    .slider{
+        margin-top: 5rem;
+        max-width: 350px;
+        max-height: 200px;
+    }
+    .product-image, #lastclone , #firstclone{
+        width: 350px;
+        height: 200px;
+    }
+}
+/*form styling*/
+div.form{
+    background-color: cornflowerblue;
+    width: 30vw;
+    height: 70vh;
+    border-radius: 2rem;
+    border: 2px solid transparent;
+    box-shadow: 4px 5px 15px rgba(185, 173, 173, 0.479);
+}
